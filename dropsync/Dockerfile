@@ -10,7 +10,7 @@ RUN mkdir -p /opt \
     && unzip /tmp/dropsync.zip -d /opt \
     && mv /opt/DropSync-main /opt/dropsync \
     && cd /opt/dropsync \
-    && sed -i 's/plugins: \[/preview: { allowedHosts: true },\n  plugins: [/' vite.config.ts \
+    && sed -i 's/const PORT = 3000;/const PORT = parseInt(process.env.PORT ?? "3333");/' server.ts \
     && npm ci \
     && npm run build \
     && npm cache clean --force \

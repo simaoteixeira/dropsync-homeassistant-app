@@ -7,4 +7,4 @@ export PORT="$(bashio::config 'port')"
 bashio::log.info "Starting DropSync with NODE_ENV=${NODE_ENV} on port ${PORT}"
 
 cd /opt/dropsync
-exec npm run preview -- --host 0.0.0.0 --port "${PORT}"
+exec node_modules/.bin/tsx server.ts
