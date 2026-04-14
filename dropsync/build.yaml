@@ -4,7 +4,3 @@ build_from:
   armhf: ghcr.io/home-assistant/armhf-base:3.22
   armv7: ghcr.io/home-assistant/armv7-base:3.22
   i386: ghcr.io/home-assistant/i386-base:3.22
-labels:
-  org.opencontainers.image.title: "DropSync Home Assistant Add-on"
-  org.opencontainers.image.description: "Peer-to-peer file transfer app for Home Assistant"
-  org.opencontainers.image.source: "https://github.com/simaoteixeira/dropsync-homeassistant-addon"
