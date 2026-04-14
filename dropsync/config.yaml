@@ -14,7 +14,7 @@ boot: auto
 init: false
 
 ingress: true
-ingress_port: 3000
+ingress_port: 0
 ingress_stream: true
 panel_icon: mdi:swap-horizontal-bold
 panel_title: DropSync
