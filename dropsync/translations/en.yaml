@@ -1,4 +1,7 @@
 configuration:
+  port:
+    name: Port
+    description: Port for DropSync to listen on.
   node_env:
     name: Node environment
     description: Runtime mode for DropSync.

@@ -1,7 +1,7 @@
 name: DropSync
 slug: dropsync
 description: Peer-to-peer file transfer app for Home Assistant Supervisor
-version: "1.0.1"
+version: "1.0.2"
 url: https://wiki.serversatho.me/en/dropsync
 arch:
   - aarch64
@@ -14,7 +14,7 @@ boot: auto
 init: false
 
 ingress: true
-ingress_port: 0
+ingress_port: 3333
 ingress_stream: true
 panel_icon: mdi:swap-horizontal-bold
 panel_title: DropSync
@@ -23,11 +23,13 @@ homeassistant_api: false
 host_network: false
 
 ports:
-  3000/tcp: 3000
+  3333/tcp: 3333
 ports_description:
-  3000/tcp: DropSync direct access port
+  3333/tcp: DropSync direct access port
 
 options:
+  port: 3333
   node_env: production
 schema:
+  port: port
   node_env: list(production|development)

@@ -2,7 +2,7 @@
 set -e
 
 export NODE_ENV="$(bashio::config 'node_env')"
-export PORT="$(bashio::addon.ingress_port)"
+export PORT="$(bashio::config 'port')"
 
 bashio::log.info "Starting DropSync with NODE_ENV=${NODE_ENV} on port ${PORT}"
 
