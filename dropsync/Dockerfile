@@ -10,6 +10,7 @@ RUN mkdir -p /opt \
     && unzip /tmp/dropsync.zip -d /opt \
     && mv /opt/DropSync-main /opt/dropsync \
     && cd /opt/dropsync \
+    && sed -i 's/plugins: \[/preview: { allowedHosts: true },\n  plugins: [/' vite.config.ts \
     && npm ci \
     && npm run build \
     && npm cache clean --force \
