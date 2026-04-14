@@ -3,7 +3,7 @@ FROM ${BUILD_FROM}
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache nodejs npm curl unzip
+RUN apk add --no-cache nodejs npm curl unzip python3 make g++
 
 RUN mkdir -p /opt \
     && curl -L https://github.com/ivucicev/DropSync/archive/refs/heads/main.zip -o /tmp/dropsync.zip \
