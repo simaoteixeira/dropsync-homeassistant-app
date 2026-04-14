@@ -1,7 +1,4 @@
 configuration:
   node_env:
     name: Node environment
-    description: Set DropSync runtime mode.
-  p2p_port:
-    name: Web port
-    description: Internal web port used by DropSync.
+    description: Runtime mode for DropSync.
