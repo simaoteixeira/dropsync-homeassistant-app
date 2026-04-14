@@ -11,6 +11,7 @@ RUN mkdir -p /opt \
     && mv /opt/DropSync-main /opt/dropsync \
     && cd /opt/dropsync \
     && sed -i 's/const PORT = 3000;/const PORT = parseInt(process.env.PORT ?? "3333");/' server.ts \
+    && sed -i 's/transports: \["websocket"\]/transports: ["polling", "websocket"]/' server.ts \
     && npm ci \
     && npm run build \
     && npm cache clean --force \
