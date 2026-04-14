@@ -1,0 +1,34 @@
+name: DropSync
+slug: dropsync
+description: Peer-to-peer file transfer app running alongside Home Assistant
+version: "1.0.0"
+url: https://wiki.serversatho.me/en/dropsync
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: services
+boot: auto
+init: false
+ingress: true
+ingress_port: 3000
+panel_icon: mdi:swap-horizontal-bold
+panel_title: DropSync
+webui: "[PROTO:ingress]/"
+homeassistant_api: false
+host_network: false
+ports:
+  3000/tcp: null
+ports_description:
+  3000/tcp: DropSync web interface
+map:
+  - share:rw
+options:
+  node_env: production
+  p2p_port: 3000
+schema:
+  node_env: list(production|development)
+  p2p_port: port
+image: "ghcr.io/simaoteixeira/{arch}-addon-dropsync"

@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bashio
+export NODE_ENV="$(bashio::config 'node_env')"
+export PORT="$(bashio::config 'p2p_port')"
+cd /opt/dropsync
+bashio::log.info "Launching DropSync on port ${PORT} with NODE_ENV=${NODE_ENV}"
+exec npm start
